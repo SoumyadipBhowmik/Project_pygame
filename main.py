@@ -21,14 +21,14 @@ start_time = 0
 background_surf = pygame.image.load("graphics/background.png").convert()
 ground_surf = pygame.image.load("graphics/ground.png").convert()
 
-
-#ALL CHARACTERS
-snail_surf = pygame.image.load("graphics\Snail\snail1.png").convert_alpha()
-snail_rect = snail_surf.get_rect(midbottom = (830,300))
-
+#Player
 player_surf = pygame.image.load("graphics\player\player_walk_1.png").convert_alpha()
 player_rect = player_surf.get_rect(midbottom = (80, 300))
 player_gravity = 0
+
+#Obstacles
+snail_surf = pygame.image.load("graphics\Snail\snail1.png").convert_alpha()
+snail_rect = snail_surf.get_rect(midbottom = (830,300))
 
 #This is for the main menu
 title = test_font.render("PyRunner", False, (111, 196, 169))
@@ -70,8 +70,6 @@ while True:
     if game_active:
         screen.blit(background_surf, (0,0))
         screen.blit(ground_surf, (0,300))
-        # pygame.draw.rect(screen, "Pink", text_rect)
-        # pygame.draw.rect(screen, "Black", text_rect, 1)
         score = get_score()
 
         #player
