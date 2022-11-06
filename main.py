@@ -7,6 +7,16 @@ class Player(pygame.sprite.Sprite):
         super().__init__()
         player_walk_1 = pygame.image.load("graphics\player\player_walk_1.png").convert_alpha()
         player_walk_2 = pygame.image.load("graphics\player\player_walk_2.png").convert_alpha()
+        #player_walk_3 = pygame.image.load("graphics\player\player_walk_3.png").convert_alpha()
+        #player_walk_4 = pygame.image.load("graphics\player\player_walk_4.png").convert_alpha()
+        #player_walk_5 = pygame.image.load("graphics\player\player_walk_5.png").convert_alpha()
+        # player_walk_6 = pygame.image.load("graphics\player\player_walk_6.png").convert_alpha()
+        # player_walk_7 = pygame.image.load("graphics\player\player_walk_7.png").convert_alpha()
+        # player_walk_8 = pygame.image.load("graphics\player\player_walk_8.png").convert_alpha()
+        # player_walk_9 = pygame.image.load("graphics\player\player_walk_9.png").convert_alpha()
+        # player_walk_10 = pygame.image.load("graphics\player\player_walk_10.png").convert_alpha()
+        # player_walk_11 = pygame.image.load("graphics\player\player_walk_11.png").convert_alpha()
+        # player_walk_12 = pygame.image.load("graphics\player\player_walk_12.png").convert_alpha()
         self.player_walk = [player_walk_1, player_walk_2]
         self.player_index = 0
         self.player_jump = pygame.image.load("graphics\player\jump.png").convert_alpha()
@@ -110,6 +120,7 @@ main_menu_music.set_volume(0.1)
 background_music.play()
 #MISC VARIABLES
 score = 0
+frames_per_second = 60
 
 #PLAYER AND ENEMIES
 
@@ -180,4 +191,4 @@ while True:
 
 #UPDATE FRAMES PER SECOND
     pygame.display.update()
-    clock.tick(60)
+    clock.tick(frames_per_second)
